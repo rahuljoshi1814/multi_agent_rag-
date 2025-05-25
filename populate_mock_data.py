@@ -1,17 +1,11 @@
 import psycopg2
 from faker import Faker
 import random
+from app.db import get_connection
 
 fake = Faker()
 
-# Update these with your actual DB credentials
-conn = psycopg2.connect(
-    dbname="Rj database",
-    user="postgres",
-    password="Rahul@2309",
-    host="localhost",
-    port="5432"
-)
+conn = get_connection()
 cur = conn.cursor()
 
 # Insert Customers
