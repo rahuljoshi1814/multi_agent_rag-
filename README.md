@@ -24,7 +24,7 @@ User → Web/API → Schema Agent → SQL Agent → Retriever → Synthesizer �
 
 ---
 
-## 🗃️ Database Schema
+##  Database Schema
 
 PostgreSQL schema includes 5 interrelated tables:
 - `customers(id, name, email, created_at)`
@@ -35,29 +35,29 @@ PostgreSQL schema includes 5 interrelated tables:
 
 ---
 
-## 📦 Setup Instructions
+##  Setup Instructions
 
-### 1. Clone the repository
+### Clone the repository
 ```bash
 git clone https://github.com/yourusername/multi-agent-rag.git
 cd multi-agent-rag
 
-### 2. Create the PostgreSQL database
+### 1. Create the PostgreSQL database
 Run the schema file: 
 -- In pgAdmin or psql
 - \i init_db.sql
 
-### 3. Populate with fake data
+### 2. Populate with fake data
 - pip install -r requirements.txt
 - python populate_mock_data.py
 
-### 4. Start the FastAPI server
+### 3. Start the FastAPI server
 uvicorn app.main:app --reload
 
-### 5. Visit the web interface
+### 4. Visit the web interface
 Go to: http://localhost:8000
 
-### 6. API Endpoint
+### 5. API Endpoint
 POST /ask
 Input: {
   "question": "Who spent the most last year?"
